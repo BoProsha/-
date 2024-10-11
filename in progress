@@ -1,0 +1,19 @@
+#1
+age=int(input("Введите возраст:"))
+if age < 18:
+    print("Вы несовершеннолетний")
+elif age > 18 and age <= 65:
+    print("Вы трудоспособный человек")
+else:
+    print("Вы пенсионер")
+
+#2
+pok = input("Введите стоимость покупки")
+poki = float(pok)
+if poki < 1000:
+    print("скидка не предоставляется")
+elif poki > 1000 and poki <= 5000:
+    print("скидка составляет:",poki * 0.05)
+else:
+    print("скидка составляет:",poki * 0.01)
+#
