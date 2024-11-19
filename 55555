@@ -1,0 +1,134 @@
+#Задание 1
+age=int(input("Введите возраст:"))
+if age < 18:
+    print ("Вы малой")
+elif age > 18 and age <= 65:
+    print ("Вы можете воркать")
+else:
+    print ("Вы старый")
+
+#Задание 2
+price=input("Введите прайс:")
+pricek=float(price)
+if pricek < 1000:
+    print("Скидки нема")
+elif pricek > 1000 and pricek <= 5000:
+    print("Скидка будет:", pricek * 0.05)
+else:
+    print ("Скидка будет:", pricek * 0.1)
+
+#Задание 3
+n1 = float(input("Первое число "))
+n2 = float(input("Второе число"))
+op= input("Операция(+,-, *, /):")
+
+if op == "+":
+    res = n1 + n2
+elif op == "-":
+    res = n1 - n2
+elif op == "*":
+    res = n1 * n2
+elif op == "/":
+    if n2 == 0:
+        print("Ошибка: деление на ноль(тупой)")
+    else:
+        res = n1 / n2
+else:
+    print("Ошибка: неверная операция")
+
+print(f"{n1} {op} {n2} = {res}")
+
+#Задание 4
+number = int(input("Введите число: "))
+if number % 2 == 0 and (number % 10 == 2 or number % 10 == 6):
+    print(True)
+else:
+    print(False)
+
+#Задание 5
+password_correct = '123456789'
+while True:
+    password = input("Введите пароль:")
+
+    if password == password_correct:
+        print("Верный пароль. Вход разрешен.")
+        break
+    else:
+        print("Пароль неправильный. Попробуйт ёщё раз...")
+
+#Задание 6
+squares = {
+    'B1': 'blue', 'B2': 'green', 'B3': 'blue',
+    'B4': 'green', 'B5': 'gray', 'B6': 'green',
+    'B7': 'blue', 'B8': 'green', 'C1': 'blue',
+    'C2': 'green', 'C3': 'gray', 'C4': 'blue',
+    'C5': 'blue', 'C6': 'blue', 'C7': 'green',
+    'C8': 'blue', 'C9': 'blue', 'C10': 'green',
+    'C11': 'green', 'C12': 'gray'
+
+}
+
+def check_square(coordinate):
+
+    coordinate = coordinate.upper()
+
+    if coordinate in squares:
+        color = squares[coordinate]
+        if color == 'green':
+            return "В данном квадрате обитает зеленый попугай."
+        elif color == 'blue':
+            return "В данном квадрате обитает синий попугай."
+        elif color == 'gray':
+            return "В данном квадрате никто не сидит."
+    else:
+        return "Некорректные координаты."
+
+user_input = input("Введите координаты квадрата (например, B1): ")
+res = check_square(user_input)
+print(res)
+
+#Задание 7
+n = int(input("Введите число n: "))
+k = int(input("Введите число k: "))
+
+if k != 0 and n % k == 0:
+    print(f"{n} кратно {k}")
+else:
+    print(f"{n} не кратно {k} или k равно 0")
+
+#Задание 8
+lvl=input()
+health=int(input())
+if lvl >= 5:
+elif health > 50 and health<= 100:
+    print("Вы готовы к миссии!")
+elif health >= 20 and health <= 50:
+    print("Ваше здоровье низкое, будьте осторожны.")
+elif health <20:
+    print("Ваше здоровье слишком низкое для выполнения миссии.")
+else:
+    print("Некорректные данные.")
+
+#Задание 9
+inventory = ["яблоко", "шариковая ручкая"]
+if "ключ" in inventory and "фонарь" in inventory:
+    print("Вы можете пройти через дверь.")
+elif "ключ" not in inventory:
+    print("У вас нет ключа, вы не можете открыть дверь")
+elif "фонарь" not in inventory:
+    print("У вас нет фонаря, слишком темно, чтобы пройти")
+else:
+    print("У вас нет ни ключа, ни фонаря, вы не можете пройти через дверь.")
+
+#Задание 10
+king = "Enemies are coming! Are the archers ready?"
+warrior = "For the Alliance!"
+magician = "The spell is ready."
+if "?" in king or "!" in king:
+    print("Есть одно из них в словах короля")
+elif "?" in warrior or "!" in warrior:
+    print("Есть одно из них в словах воина")
+elif "?" in magician or "!" in magician:
+    print("Есть одно из них в словах мага")
+else:
+    print("alo")
